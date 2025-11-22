@@ -177,28 +177,8 @@ public class PaperLibreLogin extends AuthenticLibreLogin<Player, World> {
 
     @Override
     public void authorize(Player player, User user, Audience audience) {
-        try {
-
-            var location = listeners.getSpawnLocationCache().getIfPresent(player);
-
-            if (location == null) {
-                var world = getServerHandler().chooseLobbyServer(user, player, true, false);
-
-                if (world == null) {
-                    getPlatformHandle().kick(player, getMessages().getMessage("kick-no-lobby"));
-                    return;
-                }
-
-                location = world.getSpawnLocation();
-            } else {
-                listeners.getSpawnLocationCache().invalidate(player);
-            }
-
-            var finalLocation = location;
-            PaperUtil.runSyncAndWait(() -> player.teleportAsync(finalLocation), this);
-
-        } catch (EventCancelledException ignored) {
-        }
+        // Teleport disabled, no action needed.
+        // Limbo world logic removed. (PlayerSpawnLocationEvent deprecated)
     }
 
     @Override

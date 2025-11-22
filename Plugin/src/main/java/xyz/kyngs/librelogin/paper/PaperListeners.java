@@ -42,7 +42,6 @@ import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.spigotmc.event.player.PlayerSpawnLocationEvent;
 import xyz.kyngs.librelogin.api.database.User;
 import xyz.kyngs.librelogin.common.AuthenticLibreLogin;
 import xyz.kyngs.librelogin.common.config.ConfigurationKeys;
@@ -128,6 +127,7 @@ public class PaperListeners extends AuthenticListeners<PaperLibreLogin, Player, 
         readOnlyUserCache.put(user.getUuid(), user);
     }
 
+    /* Commented out when fasing out the limbo world (PlayerSpawnLocationEvent deprecated)
     @EventHandler(priority = EventPriority.HIGHEST)
     public void chooseWorld(PlayerSpawnLocationEvent event) {
         var ip = ipCache.getIfPresent(event.getPlayer());
@@ -170,7 +170,7 @@ public class PaperListeners extends AuthenticListeners<PaperLibreLogin, Player, 
 
             event.setSpawnLocation(world.value().getSpawnLocation());
         }
-    }
+    }*/
 
     /* Commented out when migrating to PacketEvents
     //Unused, might be useful in the future
