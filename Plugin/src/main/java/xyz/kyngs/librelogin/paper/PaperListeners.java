@@ -134,6 +134,7 @@ public class PaperListeners extends AuthenticListeners<PaperLibreLogin, Player, 
         readOnlyUserCache.put(user.getUuid(), user);
     }
 
+    /* Commented out when fasing out the limbo world
     // Changed to an async variant of this event
     // cuz the previous one is deprecated and causes a bug (Issue #52)
     @EventHandler(priority = EventPriority.HIGHEST)
@@ -187,7 +188,7 @@ public class PaperListeners extends AuthenticListeners<PaperLibreLogin, Player, 
 
             event.setSpawnLocation(world.value().getSpawnLocation());
         }
-    }
+    }*/
 
     /* Commented out when migrating to PacketEvents
     //Unused, might be useful in the future

@@ -177,6 +177,9 @@ public class PaperLibreLogin extends AuthenticLibreLogin<Player, World> {
 
     @Override
     public void authorize(Player player, User user, Audience audience) {
+        // Teleport disabled, no action needed.
+        // Limbo world logic removed.
+        /* 
         try {
 
             var location = listeners.getSpawnLocationCache().getIfPresent(player.getUniqueId());
@@ -198,7 +201,7 @@ public class PaperLibreLogin extends AuthenticLibreLogin<Player, World> {
             PaperUtil.runSyncAndWait(() -> player.teleportAsync(finalLocation), this);
 
         } catch (EventCancelledException ignored) {
-        }
+        }*/
     }
 
     @Override
