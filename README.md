@@ -20,8 +20,8 @@ LibreLogin did not meet our expectations, which is why this fork was created.</p
 
 # Contributors, thanks to:
 
-**vuxeim** - for support for the newest minecraft versions
-**original LibreLogin creators** - for creating the LibreLogin
+- **vuxeim** - for support for the newest minecraft versions
+- **original LibreLogin creators** - for creating the LibreLogin
 
 # Quick information 📌
 
