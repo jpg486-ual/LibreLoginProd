@@ -186,7 +186,10 @@ public class PaperLibreLogin extends AuthenticLibreLogin<Player, World> {
 
     @Override
     public void authorize(Player player, User user, Audience audience) {
-        try {
+
+        // Teleport player to spawn location disabled
+        
+        /*try {
 
             var location = listeners.getSpawnLocationCache().getIfPresent(player.getUniqueId());
 
@@ -207,7 +210,7 @@ public class PaperLibreLogin extends AuthenticLibreLogin<Player, World> {
             PaperUtil.runSyncAndWait(() -> player.teleportAsync(finalLocation), this);
 
         } catch (EventCancelledException ignored) {
-        }
+        }*/
     }
 
     @Override

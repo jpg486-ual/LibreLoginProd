@@ -104,10 +104,13 @@ public class PaperListeners extends AuthenticListeners<PaperLibreLogin, Player, 
     public void onQuit(PlayerQuitEvent event) {
         // checking is done here instead of in AsyncPlayerSpawnLocationEvent's handler
         // cuz there is no (Player) object available in that event
-        var player = event.getPlayer();
+        
+        //limbo word fased out, so no need to regen life here
+
+        /*var player = event.getPlayer();
         if (player.getHealth() == 0) {
             player.setHealth(player.getMaxHealth());
-        }
+        }*/
         GeneralUtil.runAsync(() -> onPlayerDisconnect(event.getPlayer()));
     }
 
